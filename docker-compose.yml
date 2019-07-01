@@ -1,0 +1,21 @@
+version: "2"
+services:
+
+
+ demo:
+    build: ./
+    restart: always
+    network_mode: host
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+
+ neo4j:
+    image: neo4j:latest
+    restart: always
+    network_mode: host
+    ports:
+      - 7474:7474
+    expose:
+      - 7474
